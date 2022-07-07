@@ -1,0 +1,606 @@
+/* GENERAL CSS */
+
+@font-face {font-family: 'Qanelas';font-style: normal;font-weight: normal;src: local('Qanelas Regular'), url('../fonts/QanelasRegular.woff') format('woff');}
+@font-face {font-family: 'Qanelas Thin';font-style: normal;font-weight: normal;src: local('Qanelas Thin'), url('../fonts/QanelasThin.woff') format('woff');}
+@font-face {font-family: 'Qanelas UltraLight';font-style: normal;font-weight: normal;src: local('Qanelas UltraLight'), url('../fonts/QanelasUltraLight.woff') format('woff');}
+@font-face {font-family: 'Qanelas Light';font-style: normal;font-weight: normal;src: local('Qanelas Light'), url('../fonts/QanelasLight.woff') format('woff');}
+@font-face {font-family: 'Qanelas Medium';font-style: normal;font-weight: normal;src: local('Qanelas Medium'), url('../fonts/QanelasMedium.woff') format('woff');}
+@font-face {font-family: 'Qanelas SemiBold';font-style: normal;font-weight: normal;src: local('Qanelas SemiBold'), url('../fonts/QanelasSemiBold.woff') format('woff');}
+@font-face {font-family: 'Qanelas Bold';font-style: normal;font-weight: normal;src: local('Qanelas Bold'), url('../fonts/QanelasBold.woff') format('woff');}
+@font-face {font-family: 'Qanelas ExtraBold';font-style: normal;font-weight: normal;src: local('Qanelas ExtraBold'), url('../fonts/QanelasExtraBold.woff') format('woff');}
+@font-face {font-family: 'Qanelas Black';font-style: normal;font-weight: normal;src: local('Qanelas Black'), url('../fonts/QanelasBlack.woff') format('woff');}
+@font-face {font-family: 'Qanelas Heavy';font-style: normal;font-weight: normal;src: local('Qanelas Heavy'), url('../fonts/QanelasHeavy.woff') format('woff');}
+
+html, body {
+    font-family: "Qanelas";
+    background: #F2F2F2;
+}
+
+/* HEADER CSS */
+
+.top-circle {
+    width: 80px;
+    height: 80px;
+    background: #D8D8D8;
+    border-radius: 100%;
+    position: absolute;
+    left: 50%;
+    top: -55px;
+    transform: translateX(-50%);
+}
+
+.logo {
+    margin-top: 65px;
+    text-align: center;
+}
+
+.logo img {
+    width: 107px;
+}
+
+.nav {
+    margin-top: 40px;
+}
+
+.nav a {
+    position: relative;
+    font-family: "Qanelas Bold";
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    text-align: Center;
+    letter-spacing: 1px;
+    color: #0F0F0F;
+    opacity: .20;
+    padding: 0px 30px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.nav a:hover {
+    color: unset;
+}
+
+.nav-link:focus {
+    opacity: 1;
+    color: #000;
+    transition: all .5s ease;
+}
+
+.nav a.active {
+    opacity: 1;
+}
+
+.nav a.active::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 4px;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #000;
+}
+
+/* MODELS CONTENT CSS */
+
+section.content {
+    padding-top: 75px;
+    padding-bottom: 50px;
+}
+
+.model-content {
+    margin: auto;
+    width: 1080px;
+    height: 510px;
+    max-width: 100%;
+}
+
+.model-container {
+    height: 510px;
+    width: 510px;
+    border: 1px solid rgb(0 0 0 / 0%);
+    border-radius: 100%;
+    text-align: center;
+    position: relative;
+    padding-top: 90px;
+    margin: auto 15px;
+    float: left;
+}
+
+.model-container.active, .model-container:hover {
+    border: 1px solid rgb(0 0 0 / 5.65%);
+    transition: all .5s ease;
+}
+
+.model-image {
+    margin-top: 70px;
+    position: relative;
+    opacity: 0.25;
+    transition: all .5s ease;
+}
+
+.model-container.active .model-image, .model-container:hover .model-image {
+    opacity: 1;
+    transition: all .5s ease;
+}
+
+.model-image img {
+    width: 440px;
+    max-width: 100%;
+}
+
+.model-title {
+    font-family: 'Qanelas ExtraBold';
+    font-size: 140px;
+    line-height: 175px;
+    text-align: center;
+    letter-spacing: -6.5px;
+    color: #000000;
+    position: absolute;
+    z-index: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+.model-container.active .model-title, .model-container:hover .model-title {
+    opacity: 0.09;
+    transition: all .5s ease;
+}
+
+.model-price {
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    margin: 10px auto 20px;
+    width: 180px;
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+.model-container.active .model-price, .model-container:hover .model-price {
+    opacity: 1;
+    transition: all .5s ease;
+}
+
+.model-price span {
+    font-family: 'Qanelas SemiBold';
+}
+
+.model-button {
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    width: 84px;
+    height: 33px;
+    line-height: 33px;
+    margin: auto;
+    border-radius: 15.5px;
+    display: block;
+    font-size: 11px;
+    text-align: center;
+    letter-spacing: 2.5px;
+    transition: all .5s ease;
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+.model-button:hover {
+    background: #fff;
+    color: #000;
+    transition: all .5s ease;
+}
+
+.model-container.active .model-button, .model-container:hover .model-button {
+    opacity: 1;
+    transition: all .5s ease;
+}
+
+/* COLORS CONTENT CSS */
+
+.colors-text {
+    width: 215px;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+    margin: auto;
+    font-weight: 800;
+}
+
+.colors-title {
+    font-family: 'Qanelas ExtraBold';
+    font-size: 347.4px;
+    line-height: 175px;
+    text-align: center;
+    letter-spacing: -6.5px;
+    color: #000000;
+    position: absolute;
+    z-index: 0;
+    top: 115px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 8.64%;
+}
+
+.colors-image {
+    position: relative;
+    z-index: 1;
+    width: 550px;
+    margin: auto;
+    margin-top: 102px;
+}
+
+.colors-sections {
+    margin: auto;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.colors-sections div {
+    width: 33px;
+    height: 33px;
+    display: inline-block;
+    border-radius: 100%;
+    margin: 0px 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.colors-sections .color-red {
+    background: #B40F14;
+}
+
+.colors-sections .color-yellow {
+    background: #d37700;
+}
+
+.colors-sections .color-black {
+    background: #1C1C1C;
+}
+
+.colors-sections .color-gray {
+    background: #C8C8C8;
+}
+
+.colors-sections .check-icon {
+    display: none;
+}
+
+.colors-sections .selected .check-icon {
+    position: absolute;
+    left: -4px;
+    top: -3px;
+    z-index: 2;
+    display: unset;
+}
+
+.colors-sections .selected::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    border: 3px solid #fff;
+    background: #1C1C1C;
+    position: absolute;
+    left: -12px;
+    top: -12px;
+    border-radius: 100%;
+    z-index: 1;
+}
+
+.colors-sections .selected::after {
+    content: "";
+    position: absolute;
+    width: 43px;
+    height: 43px;
+    left: -5px;
+    top: -5px;
+    border: 1px solid black;
+    opacity: 13.25%;
+    border-radius: 100%;
+}
+
+/* ACCESSORIES CONTENT CSS */
+
+.accessories-text {
+    width: 215px;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+    margin: auto;
+    font-weight: 800;
+}
+
+.accessories-list {
+    width: 950px;
+    height: 425px;
+    margin: 40px auto 0px;
+    overflow-y: scroll;
+    position: relative;
+}
+
+article {
+    width: calc((100% / 3) - 10px);
+    color: #0F0F0F;
+    border: 1px solid rgb(151 151 151 / 12%);
+    border-radius: 11px;
+    text-align: center;
+    margin: 0px 5px 10px;
+    position: relative;
+    float: left;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: all .5s ease;
+}
+
+article:first-child {
+    margin-left: 0px;
+}
+
+article:last-child {
+    margin-right: 0px;
+}
+
+article input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.article-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    transition: all .5s ease;
+}
+
+input[type=checkbox]:checked ~ .article-bg {
+    position: absolute;
+    background: #292929;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    transition: all .5s ease;
+}
+
+input[type=checkbox]:checked ~ div {
+    color: #fff;
+    transition: all .5s ease;
+}
+
+.accessories-title {
+    font-family: 'Qanelas Bold';
+    font-size: 14px;
+    width: 170px;
+    margin: auto;
+    margin-top: 75px;
+    letter-spacing: 0.99px;
+    transition: all .1s ease;
+}
+
+.accessories-price {
+    margin-top: 50px;
+    font-size: 16px;
+    line-height: 20px;
+    transition: all .1s ease;
+}
+
+.accessories-check {
+    width: 33px;
+    height: 33px;
+    border: 1px solid rgb(151 151 151 / 18%);
+    border-radius: 100%;
+    margin: 25px auto 30px;
+}
+
+input[type=checkbox]:checked ~ .accessories-check {
+    background: rgb(106 106 106 / 18%);
+    border: 0px;
+    transition: all .5s ease;
+}
+
+.accessories-check svg {
+    margin-top: 8px;
+    display: none;
+}
+
+input[type=checkbox]:checked ~ .accessories-check svg {
+    display: unset;
+    transition: all .5s ease;
+}
+
+.accessories-list::-webkit-scrollbar {
+    width: 5px;
+}
+ 
+.accessories-list::-webkit-scrollbar-track {
+    background: rgb(216 216 216 / 57%);
+}
+ 
+.accessories-list::-webkit-scrollbar-thumb {
+    background-color: #575757;
+    border-radius: 10px;
+}
+
+/* SUMMARY CONTENT CSS */
+
+.model-container.summary {
+    height: 460px;
+    width: 460px;
+}
+
+.model-title.summary {
+    font-size: 175px;
+    line-height: 175px;
+}
+
+.model-image.summary {
+    margin-top: 70px;
+    margin-left: -70px;
+}
+
+.model-image.summary img {
+    width: 550px !important;
+    max-width: unset;
+}
+
+.summary-list {
+    width: 590px;
+    float: left;
+    padding-top: 80px;
+    padding-left: 55px;
+}
+
+.summary-list-title {
+    font-family: 'Qanelas Bold';
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.summary-list-content {
+    font-family: 'Qanelas Light';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #1C1C1C;
+    opacity: 0.38;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+    position: relative;
+}
+
+.summary-list-content::after {
+    content: "";
+    width: 325px;
+    height: 1px;
+    background: rgb(151 151 151 / 20%);
+    position: absolute;
+    left: 0px;
+    bottom: 5px;
+}
+
+.summary-list-content:last-child::after {
+    display: none;
+}
+
+/* PREVIEW CSS */
+
+.preview-container {
+    width: 940px;
+    height: 95px;
+    line-height: 95px;
+    max-width: 100%;
+    position: relative;
+    border-radius: 11px;
+    background: #fff;
+    box-shadow: 0px 2px 70px rgb(0 0 0 / 0%);
+    margin: 0px auto 50px;
+}
+
+.new-title {
+    font-family: 'Qanelas ExtraBold';
+    position: absolute;
+    top: -12.5px;
+    left: 50px;
+    width: 64px;
+    height: 25px;
+    line-height: 25px;
+    display: block;
+    background: #181818;
+    color: #fff;
+    text-align: center;
+    border-radius: 15.5px;
+    font-size: 9px;
+    letter-spacing: 7px;
+    padding-left: 7px;
+}
+
+.preview-image {
+    float: left;
+    margin: 0px 30px;
+    padding-right: 30px;
+    position: relative;
+}
+
+.preview-image img {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    width: 110px;
+}
+
+.preview-image::after {
+    content: "";
+    width: 1px;
+    height: 50px;
+    background: #979797;
+    opacity: .18;
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+}
+
+.total-price {
+    font-family: 'Qanelas Light';
+    float: left;
+    line-height: 22px;
+    font-size: 24px;
+    margin-top: 18px;
+}
+
+.total-price span {
+    font-family: 'Qanelas ExtraBold';
+    font-size: 12px;
+    letter-spacing: 1.71px;
+    line-height: 25px;
+}
+
+.preview-button {
+    font-family: 'Qanelas SemiBold';
+    float: right;
+    width: 235px;
+    background: #181818;
+    text-align: left;
+    padding-left: 40px;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 2.79px;
+    font-size: 12px;
+    border-radius: 0px 11px 11px 0px;
+    display: none;
+    transition: all .5s ease;
+}
+
+.preview-button.active {
+    display: unset;
+    transition: all .5s ease;
+}
+
+.preview-button:hover {
+    background: #000000;
+    color: white;
+    transition: all .5s ease;
+}
+
+.preview-button:hover svg {
+    right: 30px;
+    transition: all .5s ease;
+}
+
+.preview-button svg {
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    transform: translateY(-50%);
+    transition: all .5s ease;
+}

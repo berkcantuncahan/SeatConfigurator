@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="tr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/carousel.min.css">
+        <link rel="stylesheet" href="assets/css/carousel-theme.min.css">
+        <script src="assets/script/jquery.min.js"></script>
+        <script src="assets/script/carousel.js"></script>
+        <link href="assets/css/style.css" rel="stylesheet">
+        <title>Seat Configurator</title>
+    </head>
+    <body>
+        <section class="header">
+            <span class="top-circle"></span>
+            <div class="logo"><img src="assets/images/seat.png" alt="Seat Logo"></div>
+            <ul class="nav justify-content-center">
+                <li class="nav-item"><a id="nav-1" href="#models" class="nav-link active">MODELS</a></li>
+                <li class="nav-item"><a id="nav-2" href="#colors" class="nav-link">COLORS</a></li>
+                <li class="nav-item"><a id="nav-3" href="#accessories" class="nav-link">ACCESSORIES</a></li>
+                <li class="nav-item"><a id="nav-4" href="#summary" class="nav-link">SUMMARY</a></li>
+            </ul>
+        </section>
+
+        <section class="owl-carousel owl-theme content">
+            <div class="item" data-hash="models">
+                <div class="model-content">
+                    <div class="model-container active" id="model-1">
+                        <div class="model-title">IBIZA</div>
+                        <div class="model-image"><img src="assets/images/ibiza.png" alt="Seat Ibiza"></div>
+                        <div class="model-price"><span>193.500 TL</span>'den başlayan fiyatlarla</div>
+                        <a href="#" class="model-button" id="ibiza">SELECT</a>
+                    </div>
+                    <div class="model-container" id="model-2">
+                        <div class="model-title">ARONA</div>
+                        <div class="model-image"><img src="assets/images/arona.png" alt="Seat Arona"></div>
+                        <div class="model-price"><span>253.900 TL</span>'den başlayan fiyatlarla</div>
+                        <a href="#" class="model-button" id="arona">SELECT</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item" data-hash="colors">
+                <div class="model-content">
+                    <div class="colors-container">
+                        <div class="colors-text">Hayalindeki araca dair rengini seç, tarzını hemen yansıt.</div>
+                        <div class="colors-title" id="colors-name">IBIZA</div>
+                        <div class="colors-image"><img id="colors-car" src="assets/images/ibiza.png" alt="Seat Ibiza"></div>
+                        <div class="colors-sections">
+                            <div id="red" class="color-red selected"><svg class="check-icon" width="10" height="8" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.4039 0.213074L2.80752 4.80946L0.407256 2.40927L0 2.81652L2.80752 5.62404L7.81126 0.62033L7.4039 0.213074Z" fill="white"/></svg></div>
+                            <div id="yellow" class="color-yellow" style="display: none;"><svg class="check-icon" width="10" height="8" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.4039 0.213074L2.80752 4.80946L0.407256 2.40927L0 2.81652L2.80752 5.62404L7.81126 0.62033L7.4039 0.213074Z" fill="white"/></svg></div>
+                            <div id="black" class="color-black"><svg class="check-icon" width="10" height="8" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.4039 0.213074L2.80752 4.80946L0.407256 2.40927L0 2.81652L2.80752 5.62404L7.81126 0.62033L7.4039 0.213074Z" fill="white"/></svg></div>
+                            <div id="gray" class="color-gray"><svg class="check-icon" width="10" height="8" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.4039 0.213074L2.80752 4.80946L0.407256 2.40927L0 2.81652L2.80752 5.62404L7.81126 0.62033L7.4039 0.213074Z" fill="white"/></svg></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item" data-hash="accessories">
+                <div class="model-content">
+                    <div class="accessories-container">
+                        <div class="accessories-text">Seçtiğin araca ait özellikler, konforun ve yaşam stilini belirler.</div>
+                        <div class="accessories-list">
+                            <article>
+                                <input type="checkbox" id="accessories-1" checked>
+                                <div class="article-bg"></div>
+                                <div class="accessories-title">SEAT FREE SYNC PACK EASY JET</div>
+                                <div class="accessories-price">7.500 TL</div>
+                                <div class="accessories-check"><svg width="18" height="16" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.3398 0.021759L4.6792 7.6824L0.67876 3.68208L0 4.36084L4.6792 9.04004L13.0188 0.700519L12.3398 0.021759Z" fill="white"/></svg></div>
+                            </article>
+                            <article>
+                                <input type="checkbox" id="accessories-2">
+                                <div class="article-bg"></div>
+                                <div class="accessories-title">MAINTENANCE PROGRAM UPGRADE</div>
+                                <div class="accessories-price">1.250 TL</div>
+                                <div class="accessories-check"><svg width="18" height="16" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.3398 0.021759L4.6792 7.6824L0.67876 3.68208L0 4.36084L4.6792 9.04004L13.0188 0.700519L12.3398 0.021759Z" fill="white"/></svg></div>
+                            </article>
+                            <article>
+                                <input type="checkbox" id="accessories-3" checked>
+                                <div class="article-bg"></div>
+                                <div class="accessories-title">SEAT FREE SYNC PACK EASY JET</div>
+                                <div class="accessories-price">13.700 TL</div>
+                                <div class="accessories-check"><svg width="18" height="16" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.3398 0.021759L4.6792 7.6824L0.67876 3.68208L0 4.36084L4.6792 9.04004L13.0188 0.700519L12.3398 0.021759Z" fill="white"/></svg></div>
+                            </article>
+                            <article>
+                                <input type="checkbox" id="accessories-4">
+                                <div class="article-bg"></div>
+                                <div class="accessories-title">SEAT FREE SYNC PACK EASY JET</div>
+                                <div class="accessories-price">7.500 TL</div>
+                                <div class="accessories-check"><svg width="18" height="16" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.3398 0.021759L4.6792 7.6824L0.67876 3.68208L0 4.36084L4.6792 9.04004L13.0188 0.700519L12.3398 0.021759Z" fill="white"/></svg></div>
+                            </article>
+                            <article>
+                                <input type="checkbox" id="accessories-5">
+                                <div class="article-bg"></div>
+                                <div class="accessories-title">MAINTENANCE PROGRAM UPGRADE</div>
+                                <div class="accessories-price">1.250 TL</div>
+                                <div class="accessories-check"><svg width="18" height="16" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.3398 0.021759L4.6792 7.6824L0.67876 3.68208L0 4.36084L4.6792 9.04004L13.0188 0.700519L12.3398 0.021759Z" fill="white"/></svg></div>
+                            </article>
+                            <article>
+                                <input type="checkbox" id="accessories-6">
+                                <div class="article-bg"></div>
+                                <div class="accessories-title">SEAT FREE SYNC PACK EASY JET</div>
+                                <div class="accessories-price">13.700 TL</div>
+                                <div class="accessories-check"><svg width="18" height="16" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.3398 0.021759L4.6792 7.6824L0.67876 3.68208L0 4.36084L4.6792 9.04004L13.0188 0.700519L12.3398 0.021759Z" fill="white"/></svg></div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item" data-hash="summary">
+                <div class="model-content">
+                    <div class="model-container summary active">
+                        <div class="model-title summary" id="summary-name">IBIZA</div>
+                        <div class="model-image summary"><img id="summary-car" src="assets/images/ibiza.png" alt="Seat Ibiza"></div>
+                    </div>
+                    <div class="summary-list">
+                        <div class="summary-list-title">MODEL</div>
+                        <div class="summary-list-content" id="model-summary">Ibiza 1.3 Ecotech DSG</div>
+                        <div class="summary-list-title">COLOR</div>
+                        <div class="summary-list-content" id="color-summary">Rose Red</div>
+                        <div class="summary-list-title">ACCESSORIES</div>
+                        <div class="summary-list-content" id="accessories-summary">Boost Pack + light Plus</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="preview">
+            <div class="preview-container">
+                <div class="new-title">NEW</div>
+                <div class="preview-image"><img id="preview-car" src="assets/images/ibiza.png" alt="Seat Ibiza"></div>
+                <div class="total-price"><span>TOTAL</span><br><price id="totalPrice">193.500 TL</price></div>
+                <a id="step-2" href="#colors" class="preview-button active">COLORS <svg width="24" height="15" viewBox="0 0 24 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.5677 0.498401C16.2911 0.774921 16.2911 1.22361 16.5677 1.50014L21.8445 6.77702L1.51638 6.77706C1.12508 6.77702 0.808115 7.09399 0.808157 7.48529C0.808115 7.87659 1.12508 8.19356 1.51638 8.19352L21.8445 8.19356L16.5677 13.4704C16.2911 13.747 16.2911 14.1957 16.5677 14.4722C16.8442 14.7487 17.2929 14.7487 17.5694 14.4722L23.5545 8.48703C24.1069 7.93465 24.1069 7.03593 23.5545 6.48356L17.5694 0.498401C17.2927 0.221755 16.8442 0.22188 16.5677 0.498401Z" fill="white"/></svg></a>
+                <a id="step-3" href="#accessories" class="preview-button">ACCESSORIES <svg width="24" height="15" viewBox="0 0 24 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.5677 0.498401C16.2911 0.774921 16.2911 1.22361 16.5677 1.50014L21.8445 6.77702L1.51638 6.77706C1.12508 6.77702 0.808115 7.09399 0.808157 7.48529C0.808115 7.87659 1.12508 8.19356 1.51638 8.19352L21.8445 8.19356L16.5677 13.4704C16.2911 13.747 16.2911 14.1957 16.5677 14.4722C16.8442 14.7487 17.2929 14.7487 17.5694 14.4722L23.5545 8.48703C24.1069 7.93465 24.1069 7.03593 23.5545 6.48356L17.5694 0.498401C17.2927 0.221755 16.8442 0.22188 16.5677 0.498401Z" fill="white"/></svg></a>
+                <a id="step-4" href="#summary" class="preview-button">SUMMARY <svg width="24" height="15" viewBox="0 0 24 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.5677 0.498401C16.2911 0.774921 16.2911 1.22361 16.5677 1.50014L21.8445 6.77702L1.51638 6.77706C1.12508 6.77702 0.808115 7.09399 0.808157 7.48529C0.808115 7.87659 1.12508 8.19356 1.51638 8.19352L21.8445 8.19356L16.5677 13.4704C16.2911 13.747 16.2911 14.1957 16.5677 14.4722C16.8442 14.7487 17.2929 14.7487 17.5694 14.4722L23.5545 8.48703C24.1069 7.93465 24.1069 7.03593 23.5545 6.48356L17.5694 0.498401C17.2927 0.221755 16.8442 0.22188 16.5677 0.498401Z" fill="white"/></svg></a>
+                <a id="step-5" href="#summary" class="preview-button">BUY NOW <svg width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.672 3.199L4.34 1.199H3.1425C2.965 0.5115 2.344 0 1.5995 0C0.717 0 0 0.717 0 1.5995C0 2.4825 0.717 3.199 1.5995 3.199C2.344 3.199 2.965 2.6875 3.1425 2H3.66L3.8615 3.199H3.8455L5.914 13.6055C4.9275 13.6815 4.1075 14.4415 4.01 15.3965C3.953 15.957 4.1385 16.5215 4.5175 16.9395C4.8965 17.3595 5.4375 17.5995 6 17.5995H6.801C6.801 18.924 7.877 20 9.199 20C10.5235 20 11.5995 18.924 11.5995 17.5995H16C16 18.924 17.076 20 18.4005 20C19.7225 20 20.801 18.924 20.801 17.5995H22.4005C22.621 17.5995 22.801 17.422 22.801 17.199C22.801 16.9785 22.621 16.801 22.4005 16.801H20.66C20.33 15.869 19.4435 15.199 18.4005 15.199C17.3575 15.199 16.4705 15.869 16.1405 16.801H11.461C11.129 15.869 10.242 15.199 9.199 15.199C8.156 15.199 7.2695 15.869 6.9395 16.801H6C5.664 16.801 5.34 16.6545 5.1115 16.4025C4.879 16.1465 4.7715 15.8185 4.8065 15.4765C4.867 14.873 5.424 14.4005 6.076 14.4005H6.412L15.332 14.3985L19.8575 14.3965H19.8595L22.01 14.3945C23.1095 14.3945 24.004 13.5 24.004 12.4005V3.1955L4.672 3.199ZM1.5995 2.4005C1.158 2.4005 0.801 2.041 0.801 1.5995C0.801 1.158 1.158 0.801 1.5995 0.801C2.041 0.801 2.4005 1.158 2.4005 1.5995C2.4005 2.041 2.041 2.4005 1.5995 2.4005ZM23.205 5.5585L15.166 13.5975H11.7715L21.373 3.996H23.205V5.5585ZM6.662 4L5.125 5.535L4.8205 4H6.662ZM6.0625 10.256L12.3205 3.998H15.715L6.6465 13.0665C6.6365 13.074 6.635 13.086 6.627 13.094L6.0625 10.256ZM22.01 13.5955H20.824L23.205 11.215V12.4005C23.205 13.0585 22.668 13.5955 22.01 13.5955Z" fill="white"/></svg></a>
+            </div>
+        </section>
+    </body>
+    <script src="assets/script/script.js"></script>
+</html>
